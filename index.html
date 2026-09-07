@@ -540,6 +540,36 @@
         </div>
 
     </footer>
+    <!-- CART PANEL -->
+<div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+        <h2>🛒 Your Cart</h2>
+        <button onclick="closeCart()">✕</button>
+    </div>
+
+    <div id="cartItems">
+        <p class="empty-cart">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <div>
+            <span>Total</span>
+            <strong id="cartTotal">Rs. 0</strong>
+        </div>
+
+        <button class="checkout-btn">
+            Checkout →
+        </button>
+    </div>
+
+</div>
+
+<!-- CART BUTTON -->
+<button class="floating-cart" onclick="openCart()">
+    🛒
+    <span id="cartCount">0</span>
+</button>
     <script src="script.js"></script>
 </body>
 </html>
