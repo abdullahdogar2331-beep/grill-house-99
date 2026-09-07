@@ -4,86 +4,309 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
+html {
+    scroll-behavior: smooth;
 }
 
-nav {
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: #111;
+    justify-content: space-between;
+
+    padding: 25px 7%;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
     color: #f59e0b;
 }
 
-nav a {
+.logo span {
     color: #fff;
-    text-decoration: none;
-    margin-left: 25px;
 }
 
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #ddd;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f59e0b;
+}
+
+.nav-btn {
+    background: #f59e0b;
+    color: #111;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    background: #ffb52e;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
-    min-height: 85vh;
+    min-height: 100vh;
+
     display: flex;
     align-items: center;
-    padding: 60px 8%;
-    background: linear-gradient(90deg, #111 35%, rgba(17,17,17,0.4)),
-                url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1600&q=80") center/cover;
+
+    padding: 150px 7% 80px;
+
+    background:
+        linear-gradient(90deg,
+        rgba(0,0,0,0.95) 0%,
+        rgba(0,0,0,0.75) 45%,
+        rgba(0,0,0,0.25) 100%),
+        url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=90")
+        center/cover no-repeat;
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 720px;
+}
+
+.small-title {
+    color: #f59e0b;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 92px);
+    line-height: 1.02;
+    margin-bottom: 25px;
 }
 
 .hero h1 span {
+    display: block;
     color: #f59e0b;
 }
 
-.hero p {
+.hero-text {
+    max-width: 590px;
+    color: #d2d2d2;
     font-size: 18px;
-    color: #ddd;
-    margin-bottom: 30px;
-    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
+    padding: 14px 26px;
+    border-radius: 30px;
     background: #f59e0b;
     color: #111;
-    padding: 14px 25px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #ffb52e;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 13px 26px;
     border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+    border: 1px solid #777;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
-section {
-    padding: 80px 8%;
+.btn-outline:hover {
+    border-color: #f59e0b;
+    color: #f59e0b;
 }
 
-.section-title {
+.hero-info {
+    display: flex;
+    gap: 45px;
+    margin-top: 55px;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-info strong {
+    font-size: 23px;
+    color: #fff;
+}
+
+.hero-info small {
+    color: #999;
+    font-size: 12px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    padding: 35px 7%;
+    background: #141414;
+    border-bottom: 1px solid #292929;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-icon {
+    min-width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.12);
+    font-size: 23px;
+}
+
+.feature h3 {
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.feature p {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.menu-section,
+.about-section,
+.gallery-section,
+.reviews-section,
+.contact-section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
     text-align: center;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    color: #f59e0b;
+}
+
+.section-heading > p:last-child {
+    color: #999;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
     margin-bottom: 45px;
 }
 
-.section-title h2 {
-    font-size: 40px;
+.menu-categories button {
+    border: 1px solid #333;
+    background: #151515;
+    color: #aaa;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.section-title span {
-    color: #f59e0b;
+.menu-categories button:hover,
+.menu-categories button.active {
+    background: #f59e0b;
+    color: #111;
+    border-color: #f59e0b;
 }
 
 .menu-grid {
@@ -93,46 +316,529 @@ section {
 }
 
 .menu-card {
-    background: #1c1c1c;
-    border-radius: 15px;
     overflow: hidden;
-    padding-bottom: 20px;
+    border: 1px solid #292929;
+    border-radius: 18px;
+    background: #151515;
+    transition: 0.35s;
 }
 
-.menu-card img {
-    width: 100%;
-    height: 220px;
+.menu-card:hover {
+    transform: translateY(-7px);
+    border-color: #f59e0b;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+.menu-image {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.06);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    padding: 6px 11px;
+    border-radius: 20px;
+
+    background: #f59e0b;
+    color: #111;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.menu-content {
+    padding: 22px;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.menu-title h3 {
+    font-size: 18px;
+}
+
+.menu-title span {
+    color: #f59e0b;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.menu-content p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.menu-content a {
+    color: #f59e0b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   SPECIAL
+========================= */
+
+.special-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+
+    background: #151515;
+}
+
+.special-image {
+    min-height: 600px;
+}
+
+.special-image img {
+    height: 100%;
     object-fit: cover;
 }
 
-.menu-card h3,
-.menu-card p {
-    margin: 15px 20px 0;
+.special-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px 9%;
 }
 
-.price {
-    color: #f59e0b;
-    font-weight: bold;
-    font-size: 20px;
+.special-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
+
+.special-content h2 span {
+    color: #f59e0b;
+}
+
+.special-content > p {
+    color: #999;
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.special-content ul {
+    list-style: none;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.special-content li {
+    margin: 8px 0;
+}
+
+.special-price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.special-price strong {
+    color: #f59e0b;
+    font-size: 28px;
+}
+
+.special-price span {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    background: #0e0e0e;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-box {
+    padding: 35px;
+    text-align: center;
+    border: 1px solid #292929;
+    border-radius: 18px;
+    background: #151515;
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+    border-color: #f59e0b;
+}
+
+.about-box > div {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.about-box h3 {
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #151515;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    height: 270px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.15);
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review-card {
+    padding: 32px;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 18px;
+}
+
+.stars {
+    color: #f59e0b;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.review-card p {
+    color: #bbb;
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 22px;
+}
+
+.review-card strong {
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESERVATION
+========================= */
+
+.reservation-section {
+    padding: 110px 7%;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.reservation-content {
+    max-width: 760px;
+    margin: auto;
+}
+
+.reservation-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.reservation-content h2 span {
+    color: #f59e0b;
+}
+
+.reservation-content > p:not(.small-title) {
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.reservation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #0e0e0e;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact-grid h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-grid h2 span {
+    color: #f59e0b;
+}
+
+.contact-grid > div:first-child > p:last-child {
+    color: #888;
+    max-width: 450px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-info > div {
+    padding: 22px;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 14px;
+}
+
+.contact-info strong {
+    display: block;
+    color: #f59e0b;
+    margin-bottom: 7px;
+}
+
+.contact-info p {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    text-align: center;
-    padding: 30px;
-    background: #0b0b0b;
-    color: #aaa;
+    background: #080808;
+    padding: 65px 7% 25px;
 }
 
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 42px;
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 50px;
+}
+
+.footer-main > div:first-child p {
+    color: #777;
+    max-width: 350px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-links h3 {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #777;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f59e0b;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-top: 25px;
+    border-top: 1px solid #222;
+
+    color: #555;
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
     }
 
-    .menu-grid {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-grid,
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .special-section,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    nav {
+    .special-image {
+        min-height: 400px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
         padding: 20px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 140px 20px 70px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-info {
+        gap: 22px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .menu-section,
+    .about-section,
+    .gallery-section,
+    .reviews-section,
+    .contact-section {
+        padding: 75px 20px;
+    }
+
+    .menu-grid,
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 250px;
+    }
+
+    .special-content {
+        padding: 60px 20px;
+    }
+
+    .special-image {
+        min-height: 320px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid h2 {
+        font-size: 43px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
     }
 }
