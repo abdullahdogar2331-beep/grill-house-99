@@ -3,88 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grill House 99 | Premium Restaurant</title>
+
+    <title>Grill House 99 | Premium Grill & Burgers</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">🔥 Grill House 99</div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            🔥 <span>GRILL HOUSE</span> 99
+        </div>
 
-        <div>
+        <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#menu">Menu</a>
+            <a href="#special">Special</a>
             <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </div>
+
+        <a href="#reservation" class="nav-btn">Book a Table</a>
     </nav>
 
-    <section class="hero" id="home">
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+
         <div class="hero-content">
-            <h1>Fresh Taste, <span>Perfect Grill.</span></h1>
-            <p>
-                Welcome to Grill House 99 — where juicy burgers,
-                sizzling steaks and unforgettable flavors come together.
+
+            <p class="small-title">WELCOME TO GRILL HOUSE 99</p>
+
+            <h1>
+                Taste The
+                <span>Perfect Grill.</span>
+            </h1>
+
+            <p class="hero-text">
+                Premium burgers, sizzling steaks and unforgettable flavors,
+                freshly prepared by our chefs every single day.
             </p>
-            <a href="#menu" class="btn">Explore Our Menu</a>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn">Explore Menu →</a>
+                <a href="#reservation" class="btn-outline">Reserve Table</a>
+            </div>
+
+            <div class="hero-info">
+                <div>
+                    <strong>4.9/5</strong>
+                    <small>Customer Rating</small>
+                </div>
+
+                <div>
+                    <strong>20+</strong>
+                    <small>Signature Dishes</small>
+                </div>
+
+                <div>
+                    <strong>Fresh</strong>
+                    <small>Daily Ingredients</small>
+                </div>
+            </div>
+
         </div>
+    </header>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature">
+            <div class="feature-icon">🥩</div>
+            <div>
+                <h3>Premium Quality</h3>
+                <p>Fresh & carefully selected ingredients.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🔥</div>
+            <div>
+                <h3>Perfectly Grilled</h3>
+                <p>Cooked with passion and precision.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">👨‍🍳</div>
+            <div>
+                <h3>Expert Chefs</h3>
+                <p>Crafted by experienced professionals.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">⭐</div>
+            <div>
+                <h3>Loved By Guests</h3>
+                <p>Thousands of happy food lovers.</p>
+            </div>
+        </div>
+
     </section>
 
-    <section id="menu">
-        <div class="section-title">
-            <h2>Our <span>Popular Menu</span></h2>
-            <p>Made fresh. Served hot. Loved by everyone.</p>
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+
+        <div class="section-heading">
+            <p class="small-title">OUR MENU</p>
+            <h2>Made To <span>Make You Hungry.</span></h2>
+            <p>
+                Discover our selection of burgers, steaks, grilled specialties
+                and delicious sides.
+            </p>
         </div>
+
+
+        <div class="menu-categories">
+            <button class="active">All</button>
+            <button>Burgers</button>
+            <button>Steaks</button>
+            <button>Grill</button>
+            <button>Sides</button>
+        </div>
+
 
         <div class="menu-grid">
 
             <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Classic Burger">
-                <h3>Classic Beef Burger</h3>
-                <p>Juicy beef patty, fresh vegetables and special sauce.</p>
-                <p class="price">$8.99</p>
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Classic Beef Burger">
+                    <span class="badge">POPULAR</span>
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-title">
+                        <h3>Classic Beef Burger</h3>
+                        <span>Rs. 899</span>
+                    </div>
+
+                    <p>
+                        Juicy beef patty, cheddar cheese, lettuce,
+                        tomato and our signature sauce.
+                    </p>
+
+                    <a href="#reservation">Order Now →</a>
+                </div>
             </div>
 
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Grilled Steak">
-                <h3>Grilled Steak</h3>
-                <p>Tender grilled steak served with our signature sides.</p>
-                <p class="price">$15.99</p>
-            </div>
 
             <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80" alt="Pizza">
-                <h3>Special Pizza</h3>
-                <p>Fresh dough, rich cheese and delicious toppings.</p>
-                <p class="price">$11.99</p>
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=85" alt="Grilled Steak">
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-title">
+                        <h3>Premium Grilled Steak</h3>
+                        <span>Rs. 2,499</span>
+                    </div>
+
+                    <p>
+                        Tender premium steak grilled to perfection
+                        with herbs and signature seasoning.
+                    </p>
+
+                    <a href="#reservation">Order Now →</a>
+                </div>
+            </div>
+
+
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85" alt="Special Pizza">
+                    <span class="badge">CHEF'S PICK</span>
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-title">
+                        <h3>99 Special Pizza</h3>
+                        <span>Rs. 1,399</span>
+                    </div>
+
+                    <p>
+                        Crispy crust, rich cheese, premium toppings
+                        and our house-made sauce.
+                    </p>
+
+                    <a href="#reservation">Order Now →</a>
+                </div>
+            </div>
+
+
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Grilled Meat">
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-title">
+                        <h3>Signature Grill Platter</h3>
+                        <span>Rs. 2,199</span>
+                    </div>
+
+                    <p>
+                        A delicious combination of grilled meats,
+                        vegetables and signature sauces.
+                    </p>
+
+                    <a href="#reservation">Order Now →</a>
+                </div>
+            </div>
+
+
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df1?auto=format&fit=crop&w=900&q=85" alt="Chicken Burger">
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-title">
+                        <h3>Smoky Chicken Burger</h3>
+                        <span>Rs. 799</span>
+                    </div>
+
+                    <p>
+                        Crispy chicken, smoky sauce, fresh lettuce
+                        and melted cheese.
+                    </p>
+
+                    <a href="#reservation">Order Now →</a>
+                </div>
+            </div>
+
+
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85" alt="French Fries">
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-title">
+                        <h3>Loaded Cheese Fries</h3>
+                        <span>Rs. 499</span>
+                    </div>
+
+                    <p>
+                        Crispy golden fries loaded with cheese,
+                        herbs and our special sauce.
+                    </p>
+
+                    <a href="#reservation">Order Now →</a>
+                </div>
             </div>
 
         </div>
+
     </section>
 
-    <section id="about">
-        <div class="section-title">
-            <h2>About <span>Grill House 99</span></h2>
+
+    <!-- SPECIAL -->
+    <section class="special-section" id="special">
+
+        <div class="special-image">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=85" alt="Chef Special Food">
+        </div>
+
+        <div class="special-content">
+
+            <p class="small-title">CHEF'S SPECIAL</p>
+
+            <h2>
+                The Ultimate
+                <span>99 Grill Platter.</span>
+            </h2>
+
             <p>
-                We believe great food brings people together.
-                Our chefs use fresh ingredients and bold flavors
-                to create meals worth coming back for.
+                Our signature platter brings together the best flavors
+                from our grill. Perfect for sharing with friends and family.
+            </p>
+
+            <ul>
+                <li>✓ Premium grilled meat</li>
+                <li>✓ Fresh seasonal vegetables</li>
+                <li>✓ Signature house sauces</li>
+                <li>✓ Served with crispy fries</li>
+            </ul>
+
+            <div class="special-price">
+                <strong>Rs. 2,499</strong>
+                <span>Serves 2–3 people</span>
+            </div>
+
+            <a href="#reservation" class="btn">Order Special →</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+
+        <div class="section-heading">
+            <p class="small-title">OUR STORY</p>
+
+            <h2>
+                More Than Just
+                <span>Good Food.</span>
+            </h2>
+
+            <p>
+                Grill House 99 was created with one simple idea:
+                serve incredible food in a place where people love
+                to gather.
             </p>
         </div>
-    </section>
 
-    <section id="contact">
-        <div class="section-title">
-            <h2>Visit <span>Us Today</span></h2>
-            <p>📍 Main Street, Your City</p>
-            <p>📞 +1 234 567 890</p>
-            <p>🕐 Open Daily: 11 AM – 11 PM</p>
+        <div class="about-grid">
+
+            <div class="about-box">
+                <div>🔥</div>
+                <h3>Passion For Grill</h3>
+                <p>
+                    Every dish is prepared with attention to detail
+                    and a passion for great flavor.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <div>🌿</div>
+                <h3>Fresh Ingredients</h3>
+                <p>
+                    We choose fresh ingredients to deliver better
+                    taste and better quality.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <div>❤️</div>
+                <h3>Made With Love</h3>
+                <p>
+                    From our kitchen to your table, every meal is
+                    made to create a memorable experience.
+                </p>
+            </div>
+
         </div>
+
     </section>
 
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+
+        <div class="section-heading">
+            <p class="small-title">FOOD GALLERY</p>
+            <h2>A Look Inside <span>Our Kitchen.</span></h2>
+        </div>
+
+        <div class="gallery-grid">
+
+            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85" alt="Restaurant Food">
+
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85" alt="Grilled Food">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85" alt="Burger">
+
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1000&q=85" alt="Steak">
+
+            <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1000&q=85" alt="Pizza">
+
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&q=85" alt="Fries">
+
+        </div>
+
+    </section>
+
+
+    <!-- REVIEWS -->
+    <section class="reviews-section">
+
+        <div class="section-heading">
+            <p class="small-title">CUSTOMER REVIEWS</p>
+            <h2>People <span>Love Us.</span></h2>
+        </div>
+
+        <div class="reviews-grid">
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>
+                    “Absolutely amazing burgers! The flavor was incredible
+                    and the steak was cooked perfectly.”
+                </p>
+                <strong>— Ahmed R.</strong>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>
+                    “Beautiful atmosphere, delicious food and excellent
+                    service. Definitely coming back.”
+                </p>
+                <strong>— Sarah K.</strong>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>
+                    “The Grill House 99 platter is a must try.
+                    Perfect place for dinner with friends.”
+                </p>
+                <strong>— Hamza M.</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESERVATION -->
+    <section class="reservation-section" id="reservation">
+
+        <div class="reservation-content">
+
+            <p class="small-title">RESERVE YOUR TABLE</p>
+
+            <h2>
+                Ready For A
+                <span>Great Meal?</span>
+            </h2>
+
+            <p>
+                Book your table today and enjoy an unforgettable
+                dining experience at Grill House 99.
+            </p>
+
+            <div class="reservation-buttons">
+                <a href="tel:+1234567890" class="btn">📞 Call Us</a>
+                <a href="https://wa.me/1234567890" class="btn-outline">💬 WhatsApp</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+
+        <div class="contact-grid">
+
+            <div>
+                <p class="small-title">FIND US</p>
+                <h2>Visit <span>Grill House 99.</span></h2>
+                <p>
+                    Come hungry. Leave happy.
+                    We're ready to serve you.
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <div>
+                    <strong>📍 Address</strong>
+                    <p>Main Street, Your City</p>
+                </div>
+
+                <div>
+                    <strong>🕐 Opening Hours</strong>
+                    <p>Monday – Sunday: 11 AM – 11 PM</p>
+                </div>
+
+                <div>
+                    <strong>📞 Phone</strong>
+                    <p>+1 234 567 890</p>
+                </div>
+
+                <div>
+                    <strong>✉️ Email</strong>
+                    <p>hello@grillhouse99.com</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Grill House 99. All Rights Reserved.</p>
+
+        <div class="footer-main">
+
+            <div>
+                <div class="logo">
+                    🔥 <span>GRILL HOUSE</span> 99
+                </div>
+
+                <p>
+                    Premium burgers, steaks and grilled
+                    specialties made with passion.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Follow Us</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Grill House 99. All Rights Reserved.</p>
+            <p>Made with 🔥 & passion.</p>
+        </div>
+
     </footer>
 
 </body>
